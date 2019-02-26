@@ -38,6 +38,7 @@
                 "longitude": -75.700269
             },
             "node_type": "full",
+            "history_type": "none",
             "api_endpoint": "http://api.eosn.io",
             "ssl_endpoint": "https://api.eosn.io"
         },
