@@ -1,0 +1,27 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/index.html",
+        "destination": "/bp.json"
+      },
+      {
+        "source": "/",
+        "destination": "/bp.json"
+      }
+    ],
+    "headers": [{
+      "source": "**/*.@(json)",
+      "headers": [{"key": "Access-Control-Allow-Origin","value": "*"}]
+    }, {
+      "source":"/service-worker.js",
+      "headers": [{"key": "Cache-Control", "value": "no-cache"}]
+    }]
+  }
+}
